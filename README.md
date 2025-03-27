@@ -106,6 +106,7 @@ Install them using:
        # Avoid rate limiting by adding a small delay (optional)
        time.sleep(1)
       ```
+
       Visit https://gist.github.com/ and check if all gists were created in your GitHub account. You can skip to Step-10.
 
 7. Created app/main.py to fetch and display GitHub gists. Added an automated test tests/test_main.py for the same to cover all functionalities. 
