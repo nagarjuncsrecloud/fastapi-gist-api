@@ -37,11 +37,11 @@ To get a local copy up and running follow these simple example steps.
 1. Find a Python project template on GitHub, e.g., cookiecutter-pypackage.
 
 2. Clone the repository to get the minimal Python directory structure. Then copy the contents of the cloned cookiecutter package to your project workspace. Say, "fastapi-gist-api".
-   ```sh
-    git clone https://github.com/cookiecutter/cookiecutter-pypackage.git
-    cd cookiecutter-pypackage
-    cp -rp /path-to-cookiecutter-pypackage/* /path-to-workspace/fastapi-gist-api/
-   ```
+  ```sh
+   git clone https://github.com/cookiecutter/cookiecutter-pypackage.git
+   cd cookiecutter-pypackage
+   cp -rp /path-to-cookiecutter-pypackage/* /path-to-workspace/fastapi-gist-api/
+  ```
 
 3. Create a requirements.txt to install the necesssary modules, packages necessary for the python application to run
 
@@ -106,7 +106,7 @@ Install them using:
        # Avoid rate limiting by adding a small delay (optional)
        time.sleep(1)
   ```
-      Visit https://gist.github.com/ and check if all gists were created in your GitHub account. You can skip to Step-10.
+NOTE: Visit https://gist.github.com/ and check if all gists were created in your GitHub account. You can skip to Step-10.
 
 7. Created app/main.py to fetch and display GitHub gists. Added an automated test tests/test_main.py for the same to cover all functionalities. 
 
@@ -220,5 +220,6 @@ This ensures you’re always testing with a fresh container.
 ```
 
 16. Verify the CI/CD Pipeline Execution on GitHub
-   Go to your GitHub repository. -> Click on the "Actions" tab. 
+* Go to your GitHub repository. -> Click on the "Actions" tab. 
+
 You should see the workflow running automatically on push.
