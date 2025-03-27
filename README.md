@@ -1,39 +1,6 @@
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#githubrepo">GitHub Repository</a></li>
-    <li><a href="#githubtoken">GitHub Token</a></li>
-    <li><a href="#gistsetup">Gist Setup</a></li>
-    <li><a href="#projectdirectory">Project Directory</a></li>
-    <li><a href="#importproject">Import Project</a></li>
-    <li><a href="#localdeploy">Build & Deploy in Local</a></li>
-    <li><a href="#functionaltest">Functional Testing</a></li>
-    <li><a href="#pipeline">Pipeline</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
-
-
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-# HTTP API interacts with GitHub API to list Gist Users
+## HTTP API interacts with GitHub API to list Gist Users
 
 Creates a simple HTTP web server API that interacts with the GitHub API and responds to requests on /<USER> with a list of the user’s publicly available Gists.
 
