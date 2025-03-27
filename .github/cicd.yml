@@ -1,0 +1,52 @@
+name: FastAPI Gist API CI/CD
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run Unit Tests with pytest
+        run: pytest tests/
+
+  docker:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Build Docker Image
+        run: docker build -t fastapi-gist-api .
+
+      - name: Run Docker Container
+        run: docker run -d -p 8080:8080 --name fastapi-container fastapi-gist-api
+
+      - name: Wait for API to Start
+        run: sleep 5  # Give FastAPI some time to start
+
+      - name: Run Tests Inside Docker
+        run: docker exec fastapi-container pytest tests/
+
+      - name: Test API with cURL
+        run: |
+          curl -f http://localhost:8080/octocat?limit=3&offset=0
