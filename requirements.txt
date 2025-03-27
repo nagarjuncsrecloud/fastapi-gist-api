@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+requests
+redis
+pytest
+httpx
+pyyaml
+cookiecutter
+python-dotenv
+pytest-cookies
