@@ -2,7 +2,6 @@ import requests
 import time
 
 # Replace with your GitHub Personal Access Token
-# GITHUB_TOKEN = "YOUR_TOKEN"
 
 # GitHub API URL for creating gists
 GITHUB_API_URL = "https://api.github.com/gists"
